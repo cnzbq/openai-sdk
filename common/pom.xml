@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>openai-sdk</artifactId>
-        <groupId>com.github.cnzbq</groupId>
+        <groupId>io.github.cnzbq</groupId>
         <version>1.0.0</version>
     </parent>
     <description>开放平台API接口封装公共模块.</description>
