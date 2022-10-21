@@ -27,4 +27,9 @@ public class AiBaseResult<T> {
      * 结果
      */
     private T data;
+
+    /**
+     * 请求用时
+     */
+    private Long time;
 }

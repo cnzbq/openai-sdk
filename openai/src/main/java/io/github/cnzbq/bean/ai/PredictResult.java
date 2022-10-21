@@ -32,5 +32,13 @@ public class PredictResult extends AiBaseResult<List<PredictResult.DiseaseInfo>>
          * 匹配到的模型id
          */
         private Long matchId;
+        /**
+         * 平台推荐的阈值
+         */
+        private Float defaultThreshold;
+        /**
+         * 问卷id
+         */
+        private String surveyId;
     }
 }
