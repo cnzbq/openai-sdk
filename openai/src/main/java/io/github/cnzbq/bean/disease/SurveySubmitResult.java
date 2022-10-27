@@ -71,5 +71,15 @@ public class SurveySubmitResult extends AiBaseResult<SurveySubmitResult.ResultIn
          * 分数
          */
         private Integer score;
+
+        /**
+         * 题目总数
+         */
+        private Integer total;
+
+        /**
+         * 平均分
+         */
+        private String avg;
     }
 }
