@@ -33,6 +33,13 @@ public class OcrApacheHttpRequestExecutor extends OcrRequestExecutor<CloseableHt
         if (requestHttp.getRequestHttpProxy() != null) {
             RequestConfig config = RequestConfig.custom().setProxy(requestHttp.getRequestHttpProxy()).build();
             httpPost.setConfig(config);
+        } else {
+            RequestConfig config = RequestConfig.custom()
+                    .setConnectTimeout(120000)
+                    .setConnectionRequestTimeout(120000)
+                    .setSocketTimeout(120000)
+                    .build();
+            httpPost.setConfig(config);
         }
 
         if (Objects.nonNull(ocrInfo)) {

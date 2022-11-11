@@ -17,6 +17,7 @@ import java.util.concurrent.TimeUnit;
  *
  * @author lry, looly
  */
+@Deprecated
 public class SystemClock {
 
     /**

@@ -14,7 +14,7 @@ public interface OcrService {
 
     /**
      * ocr
-     * 图像大于1M时建议进行压缩，可以使用com.wesure.util.FileUtils#getImageCom进行压缩
+     * 图像大于1M时建议进行压缩，可以使用FileUtils#getImageCom进行压缩
      *
      * @param imgContents 图像base64数组
      * @param reportType  报告类型 1 血常规 2 生化
@@ -23,7 +23,7 @@ public interface OcrService {
 
     /**
      * ocr
-     * 图像大于1M时建议进行压缩，可以使用com.wesure.util.FileUtils#getImageCom进行压缩
+     * 图像大于1M时建议进行压缩，可以使用FileUtils#getImageCom进行压缩
      *
      * @param imgContent 图像base64
      * @param reportType 报告类型 1 血常规 2 生化
@@ -34,7 +34,7 @@ public interface OcrService {
 
     /**
      * ocr
-     * 图像大于1M时建议进行压缩，可以使用com.wesure.util.FileUtils#getImageCom进行压缩
+     * 图像大于1M时建议进行压缩，可以使用FileUtils#getImageCom进行压缩
      *
      * @param imgContent 图像base64
      */

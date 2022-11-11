@@ -1,16 +1,15 @@
 package io.github.cnzbq.api.impl;
 
+import com.google.gson.Gson;
 import io.github.cnzbq.api.AiService;
 import io.github.cnzbq.api.DiseaseService;
 import io.github.cnzbq.api.OcrService;
 import io.github.cnzbq.api.OpenAiService;
+import io.github.cnzbq.bean.SignHeader;
 import io.github.cnzbq.config.AiConfig;
 import io.github.cnzbq.enums.AiApiUrl;
-import com.google.gson.Gson;
-import io.github.cnzbq.bean.SignHeader;
 import io.github.cnzbq.error.AiErrorException;
 import io.github.cnzbq.error.AiRuntimeException;
-import io.github.cnzbq.util.SystemClock;
 import io.github.cnzbq.util.http.RequestExecutor;
 import io.github.cnzbq.util.http.RequestHttp;
 import io.github.cnzbq.util.http.SimpleGetRequestExecutor;
@@ -74,7 +73,7 @@ public abstract class BaseAiServiceImpl<H, P> implements OpenAiService, RequestH
 
     @Override
     public SignHeader getSignHeader(String version) {
-        long timestamp = SystemClock.now();
+        long timestamp = System.currentTimeMillis();
         String appKey = this.aiConfig.getAppKey();
         if (StringUtils.isEmpty(appKey)) {
             throw new AiRuntimeException("appKey不能为空");
