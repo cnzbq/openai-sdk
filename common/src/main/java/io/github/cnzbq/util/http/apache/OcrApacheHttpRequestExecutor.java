@@ -30,16 +30,14 @@ public class OcrApacheHttpRequestExecutor extends OcrRequestExecutor<CloseableHt
     @Override
     public String execute(String uri, OcrInfo ocrInfo, Header[] headers) throws AiErrorException, IOException {
         HttpPost httpPost = new HttpPost(uri);
+        RequestConfig.Builder configBuilder = RequestConfig.custom()
+                .setConnectTimeout(120000)
+                .setConnectionRequestTimeout(120000)
+                .setSocketTimeout(120000);
         if (requestHttp.getRequestHttpProxy() != null) {
-            RequestConfig config = RequestConfig.custom().setProxy(requestHttp.getRequestHttpProxy()).build();
-            httpPost.setConfig(config);
+            httpPost.setConfig(configBuilder.setProxy(requestHttp.getRequestHttpProxy()).build());
         } else {
-            RequestConfig config = RequestConfig.custom()
-                    .setConnectTimeout(120000)
-                    .setConnectionRequestTimeout(120000)
-                    .setSocketTimeout(120000)
-                    .build();
-            httpPost.setConfig(config);
+            httpPost.setConfig(configBuilder.build());
         }
 
         if (Objects.nonNull(ocrInfo)) {

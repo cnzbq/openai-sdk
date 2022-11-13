@@ -7,7 +7,7 @@
     <groupId>io.github.cnzbq</groupId>
     <artifactId>openai-sdk</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <name>openai - sdk</name>
     <url>https://github.com/cnzbq/openai-sdk</url>
     <description>开放平台API接口封装.</description>
@@ -98,6 +98,15 @@
             <build>
                 <!--发布到中央release仓库插件-->
                 <plugins>
+                    <!--版本修改插件-->
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>versions-maven-plugin</artifactId>
+                        <version>2.13.0</version>
+                        <configuration>
+                            <generateBackupPoms>false</generateBackupPoms>
+                        </configuration>
+                    </plugin>
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>

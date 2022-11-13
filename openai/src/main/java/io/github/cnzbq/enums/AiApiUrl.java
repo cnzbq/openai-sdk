@@ -48,7 +48,7 @@ public interface AiApiUrl {
         /**
          * 血常规报告单识别
          */
-        CBC_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/api/ocr/report");
+        CBC_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/ocr/report");
 
         private final String prefix;
         private final String path;
@@ -62,17 +62,17 @@ public interface AiApiUrl {
         /**
          * 场景获取项目列表
          */
-        SCENE_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/api/dis/scene"),
+        SCENE_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/dis/scene"),
 
         /**
          * 疾病识别
          */
-        PREDICT_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/api/dis/predict"),
+        PREDICT_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/dis/predict"),
 
         /**
          * 结果分析
          */
-        EXPLAINER_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/api/dis/explainer");
+        EXPLAINER_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/dis/explainer");
 
         private final String prefix;
         private final String path;
@@ -85,17 +85,17 @@ public interface AiApiUrl {
         /**
          * 疾病科普
          */
-        KNOWLEDGE_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/api/dis/knowledge"),
+        KNOWLEDGE_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/dis/knowledge"),
 
         /**
          * 疾病问卷
          */
-        SURVEY_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/api/dis/survey"),
+        SURVEY_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/dis/survey"),
 
         /**
          * 问卷提交
          */
-        SURVEY_SUBMIT_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/api/dis/survey/submit");
+        SURVEY_SUBMIT_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/dis/survey/submit");
 
         private final String prefix;
         private final String path;
