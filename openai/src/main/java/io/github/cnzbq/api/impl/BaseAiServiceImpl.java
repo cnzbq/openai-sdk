@@ -108,12 +108,16 @@ public abstract class BaseAiServiceImpl<H, P> implements OpenAiService, RequestH
             } catch (AiErrorException e) {
                 // 500 系统错误, 1000ms后重试
                 if (Objects.isNull(e.getCode()) || (e.getCode() == 500 || e.getCode() == 1)) {
+                    if (StringUtils.isNotEmpty(e.getMessage()) && e.getMessage().contains("检验项目")) {
+                        throw e;
+                    }
+
                     // 判断是否已经超了最大重试次数
                     if (retryTimes + 1 > this.maxRetryTimes) {
                         log.warn("重试达到最大次数【{}】", maxRetryTimes);
                         log.error("请求异常", e);
                         //最后一次重试失败后，直接抛出异常，不再等待
-                        throw new AiErrorException("openAI服务端异常，超出重试次数");
+                        throw e;
                     }
 
                     int sleepMillis = this.retrySleepMillis * (1 << retryTimes);

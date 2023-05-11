@@ -5,7 +5,7 @@
     <parent>
         <artifactId>openai-sdk</artifactId>
         <groupId>io.github.cnzbq</groupId>
-        <version>1.0.4</version>
+        <version>1.0.5</version>
     </parent>
     <description>开放平台API接口封装.</description>
     <modelVersion>4.0.0</modelVersion>
