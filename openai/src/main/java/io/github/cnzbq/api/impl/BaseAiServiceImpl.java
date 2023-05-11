@@ -145,7 +145,7 @@ public abstract class BaseAiServiceImpl<H, P> implements OpenAiService, RequestH
             }
             return result;
         } catch (AiErrorException e) {
-            log.warn("\n【请求地址】: {}\n【请求参数】：{}\n【错误信息】：{}", uri, new Gson().toJson(data), e);
+            log.warn("\n【请求地址】: {}\n【请求参数】：{}\n【错误信息】：", uri, new Gson().toJson(data), e);
             throw e;
         } catch (IOException e) {
             log.warn("\n【请求地址】: {}\n【请求参数】：{}\n【异常信息】：{}", uri, new Gson().toJson(data), e.getMessage());
