@@ -3,7 +3,7 @@ package io.github.cnzbq.service;
 import io.github.cnzbq.error.AiErrorException;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 public interface AiService {

@@ -8,7 +8,7 @@ import org.apache.http.Header;
 import org.apache.http.message.BasicHeader;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 @Data

@@ -1,4 +1,4 @@
-package io.github.cnzbq.bean.disease;
+package io.github.cnzbq.bean.survey;
 
 import com.google.gson.Gson;
 import io.github.cnzbq.util.MapUtils;
@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 @Data

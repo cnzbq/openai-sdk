@@ -39,9 +39,9 @@ public class ApacheSimplePostRequestExecutor extends SimplePostRequestExecutor<C
             StringEntity entity = new StringEntity(postEntity, Consts.UTF_8);
             entity.setContentType("application/json; charset=utf-8");
             httpPost.setEntity(entity);
-            if (Objects.nonNull(headers)) {
-                httpPost.setHeaders(headers);
-            }
+        }
+        if (Objects.nonNull(headers)) {
+            httpPost.setHeaders(headers);
         }
 
         try (CloseableHttpResponse response = requestHttp.getRequestHttpClient().execute(httpPost)) {

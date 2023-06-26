@@ -7,7 +7,7 @@ import org.apache.http.HttpHost;
 import org.apache.http.impl.client.CloseableHttpClient;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 public class OpenAiServiceHttpClientImpl extends BaseAiServiceImpl<CloseableHttpClient, HttpHost> {

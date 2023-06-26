@@ -3,7 +3,7 @@ package io.github.cnzbq.bean;
 import lombok.Data;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 @Data

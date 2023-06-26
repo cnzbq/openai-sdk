@@ -10,7 +10,7 @@ import java.io.IOException;
  *
  * @param <T> 返回值类型
  * @param <E> 请求参数类型
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 public interface RequestExecutor<T, E> {

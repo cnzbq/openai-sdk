@@ -1,4 +1,4 @@
-package io.github.cnzbq.bean.disease;
+package io.github.cnzbq.bean.survey;
 
 import io.github.cnzbq.bean.AiBaseResult;
 import lombok.Data;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 @Data

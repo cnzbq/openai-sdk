@@ -8,7 +8,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 @Slf4j

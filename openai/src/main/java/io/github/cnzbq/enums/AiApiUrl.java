@@ -8,7 +8,7 @@ import lombok.Getter;
 import java.util.Objects;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 public interface AiApiUrl {
@@ -85,17 +85,38 @@ public interface AiApiUrl {
         /**
          * 疾病科普
          */
-        KNOWLEDGE_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/dis/knowledge"),
+        KNOWLEDGE_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/dis/knowledge");
+
+        private final String prefix;
+        private final String path;
+    }
+
+    @AllArgsConstructor
+    @Getter
+    enum Survey implements AiApiUrl {
 
         /**
          * 疾病问卷
          */
-        SURVEY_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/dis/survey"),
+        SURVEY_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/survey"),
 
         /**
          * 问卷提交
          */
-        SURVEY_SUBMIT_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/dis/survey/submit");
+        SURVEY_SUBMIT_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/survey/submit");
+
+        private final String prefix;
+        private final String path;
+    }
+
+    @AllArgsConstructor
+    @Getter
+    enum User implements AiApiUrl {
+
+        /**
+         * 授权场景获取
+         */
+        AUTH_SCENE_URL(AiHostConfig.OPEN_DEFAULT_HOST_URL, "/open/user");
 
         private final String prefix;
         private final String path;

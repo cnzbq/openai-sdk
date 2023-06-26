@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 public interface OcrService {

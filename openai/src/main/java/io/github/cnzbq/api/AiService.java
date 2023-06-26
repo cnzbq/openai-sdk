@@ -9,7 +9,7 @@ import io.github.cnzbq.enums.PlotEnum;
 import io.github.cnzbq.error.AiErrorException;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 public interface AiService {

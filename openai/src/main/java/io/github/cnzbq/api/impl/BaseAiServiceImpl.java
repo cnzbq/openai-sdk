@@ -1,10 +1,7 @@
 package io.github.cnzbq.api.impl;
 
 import com.google.gson.Gson;
-import io.github.cnzbq.api.AiService;
-import io.github.cnzbq.api.DiseaseService;
-import io.github.cnzbq.api.OcrService;
-import io.github.cnzbq.api.OpenAiService;
+import io.github.cnzbq.api.*;
 import io.github.cnzbq.bean.SignHeader;
 import io.github.cnzbq.config.AiConfig;
 import io.github.cnzbq.enums.AiApiUrl;
@@ -26,7 +23,7 @@ import java.util.Objects;
 import static io.github.cnzbq.util.Md5Util.md5Hex;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 @Slf4j
@@ -40,6 +37,12 @@ public abstract class BaseAiServiceImpl<H, P> implements OpenAiService, RequestH
     @Getter
     @Setter
     private OcrService ocrService = new OcrServiceImpl(this);
+    @Getter
+    @Setter
+    private SurveyService surveyService = new SurveyServiceImpl(this);
+    @Getter
+    @Setter
+    private UserService userService = new UserServiceImpl(this);
     @Getter
     private AiConfig aiConfig;
     private int retrySleepMillis = 1000;

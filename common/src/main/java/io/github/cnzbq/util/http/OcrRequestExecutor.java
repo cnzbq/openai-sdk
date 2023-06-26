@@ -8,7 +8,7 @@ import org.apache.http.Header;
 import java.io.IOException;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 @SuppressWarnings("all")

@@ -6,7 +6,7 @@ import com.google.gson.Gson;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 public class AiResponseUtils {

@@ -1,7 +1,7 @@
 package io.github.cnzbq.error;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 public class AiRuntimeException extends RuntimeException {

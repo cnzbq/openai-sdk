@@ -37,9 +37,9 @@ public class ApacheSimpleGetRequestExecutor extends SimpleGetRequestExecutor<Clo
         if (requestHttp.getRequestHttpProxy() != null) {
             RequestConfig config = RequestConfig.custom().setProxy(requestHttp.getRequestHttpProxy()).build();
             httpGet.setConfig(config);
-            if (Objects.nonNull(headers)) {
-                httpGet.setHeaders(headers);
-            }
+        }
+        if (Objects.nonNull(headers)) {
+            httpGet.setHeaders(headers);
         }
 
         try (CloseableHttpResponse response = requestHttp.getRequestHttpClient().execute(httpGet)) {

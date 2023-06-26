@@ -8,7 +8,7 @@ import io.github.cnzbq.util.http.RequestExecutor;
 import io.github.cnzbq.util.http.RequestHttp;
 
 /**
- * @author Dingwq
+ * @author zbq
  * @since 1.0.0
  */
 public interface OpenAiService extends io.github.cnzbq.service.AiService {
@@ -27,6 +27,16 @@ public interface OpenAiService extends io.github.cnzbq.service.AiService {
      * 返回图像识别类功能实现类
      */
     OcrService getOcrService();
+
+    /**
+     * 返回问卷类功能实现类
+     */
+    SurveyService getSurveyService();
+
+    /**
+     * 返回用户类功能实现类
+     */
+    UserService getUserService();
 
     /**
      * 初始化http请求对象.
