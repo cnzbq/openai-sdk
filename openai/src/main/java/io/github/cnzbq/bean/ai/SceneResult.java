@@ -27,6 +27,16 @@ public class SceneResult extends AiBaseResult<List<SceneResult.SceneItem>> {
         private String enName;
 
         /**
+         * 英文别名
+         */
+        private String enViewAliase;
+
+        /**
+         * 中文别名
+         */
+        private String cnViewAliase;
+
+        /**
          * 单位
          */
         private String unit;
