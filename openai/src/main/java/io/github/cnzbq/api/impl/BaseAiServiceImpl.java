@@ -77,6 +77,11 @@ public abstract class BaseAiServiceImpl<H, P> implements OpenAiService, RequestH
     @Override
     public SignHeader getSignHeader(String version) {
         long timestamp = System.currentTimeMillis();
+        return getSignHeader(timestamp, version);
+    }
+
+    @Override
+    public SignHeader getSignHeader(long timestamp, String version) {
         String appKey = this.aiConfig.getAppKey();
         if (StringUtils.isEmpty(appKey)) {
             throw new AiRuntimeException("appKey不能为空");

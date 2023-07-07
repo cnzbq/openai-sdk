@@ -59,6 +59,25 @@ public interface OpenAiService extends io.github.cnzbq.service.AiService {
     SignHeader getSignHeader(String version);
 
     /**
+     * 获取授权请求头
+     *
+     * @param timestamp 时间戳
+     * @return SignHeader 对象
+     */
+    default SignHeader getSignHeader(long timestamp) {
+        return getSignHeader(timestamp, "v1");
+    }
+
+    /**
+     * 获取授权请求头
+     *
+     * @param timestamp 时间戳
+     * @param version   版本号
+     * @return SignHeader 对象
+     */
+    SignHeader getSignHeader(long timestamp, String version);
+
+    /**
      * 获取默认版本授权请求头
      *
      * @return SignHeader 对象
